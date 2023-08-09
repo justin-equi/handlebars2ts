@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`textToIntf > should parse simple type 1`] = `
+"{
+	name: string;
+}"
+`;
+
+exports[`textToIntf > should parse simple type loop 1`] = `
+"{
+	person: {
+		name: string;
+}[]
+}"
+`;
+
+exports[`textToIntf > should parse simple type multiple 1`] = `
+"{
+	name: string;
+	more: string;
+}"
+`;

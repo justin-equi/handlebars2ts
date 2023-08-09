@@ -7,8 +7,21 @@
     "typescript": "^5.1.6",
     "vitest": "^0.34.1"
   },
+  "exports": {
+    "types": "./lib/types/*.d.ts",
+    "require": "./lib/cjs/index.js",
+    "import": "./lib/esm/index.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
-    "test": "vitest ./src/**/*.test.ts"
+    "tsc:check": "tsc --noEmit",
+    "cjs": "mkdir -p lib/cjs && tsc --module commonjs --outDir ./lib/cjs; echo '{\"type\": \"commonjs\"}' >./lib/cjs/package.json",
+    "esm": "mkdir -p lib/esm && tsc --module es2020 --declarationDir lib/types --outDir ./lib/esm; echo '{\"type\": \"module\"}' > ./lib/esm/package.json",
+    "build": "rm -rf lib && yarn cjs && yarn esm",
+    "test": "vitest run ",
+    "test:watch": "vitest run --watch"
   },
   "dependencies": {
     "handlebars": "^4.7.8"

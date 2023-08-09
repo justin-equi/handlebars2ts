@@ -14,7 +14,8 @@ export function isObjectLike(v: unknown): v is Record<PropertyKey, unknown> {
   }
   return false;
 }
+
 export const isPathExpression = makeGuard('PathExpression');
 export const isBlockStatement = makeGuard('BlockStatement');
-export const isMustachStatement = makeGuard('MustacheStatement');
+export const isMustacheStatement = makeGuard('MustacheStatement');
 export const isProgram = makeGuard('Program');
