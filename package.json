@@ -1,0 +1,16 @@
+{
+  "name": "bars2ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.1"
+  },
+  "scripts": {
+    "test": "vitest ./src/**/*.test.ts"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  }
+}
