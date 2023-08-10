@@ -17,8 +17,7 @@
                 "${fileDirname}/${fileBasenameNoExtension}",
             ],
             "smartStep": true,
-            "console": "integratedTerminal",
-            "runtimeExecutable": "/Users/justin/.nvm/versions/node/v18.9.1/bin/node"
+            "console": "integratedTerminal"
         }
     ]
 }
