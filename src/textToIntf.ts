@@ -8,7 +8,7 @@ import {
 import { HasType } from "./types";
 
 const parseHandlebarsVariables = (input = "") =>
-	handleStatement(parseWithoutProcessing(input), {});
+	handleStatement(parseWithoutProcessing(input));
 
 type Tree = { array?: boolean; name: string; tree?: Record<string, Tree> };
 
