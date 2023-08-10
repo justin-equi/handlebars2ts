@@ -1,6 +1,6 @@
 import { textToIntf } from "./textToIntf";
 
-export function makeTemplate(name: string, template: string) {
+export function makeTemplate(template: string, name: string = '__default') {
 	return `
 import {compile} from 'handlebars';
 

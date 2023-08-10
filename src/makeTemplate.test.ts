@@ -11,12 +11,12 @@ function transpile(
 	return transpileModule(source, { compilerOptions }).outputText;
 }
 it("should make a nice template", () => {
-	expect(makeTemplate("helloWorld", `hello, {{{name}}}!`)).toMatchSnapshot();
+	expect(makeTemplate(`hello, {{{name}}}!`)).toMatchSnapshot();
 });
 
 it("should compile", function () {
 	const result = new vm.Script(
-		transpile(makeTemplate("helloWorld", `hello, {{{name}}}!`)),
+		transpile(makeTemplate( `hello, {{{name}}}!`)),
 		{
 			filename: "sampletest.mjs",
 		},

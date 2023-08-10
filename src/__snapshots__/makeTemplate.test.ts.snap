@@ -4,9 +4,9 @@ exports[`should make a nice template 1`] = `
 "
 import {compile} from 'handlebars';
 
-export const helloWorld = compile<{
+export const __default = compile<{
 	name: string;
 }>(\\"hello, {{{name}}}!\\");
-export default helloWorld;
+export default __default;
   "
 `;
