@@ -15,8 +15,7 @@ it("should make a nice template", () => {
 });
 
 it("should compile", function () {
-    const code = transpile(makeTemplate("helloWorld", `hello, {{{name}}}!`))
-    const result = new vm.Script(code, {
+    const result = new vm.Script(transpile(makeTemplate("helloWorld", `hello, {{{name}}}!`)), {
         filename: 'sampletest.mjs',
     }).runInNewContext({
         ModuleKind: ModuleKind.CommonJS,
