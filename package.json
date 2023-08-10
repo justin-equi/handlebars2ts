@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
   "dependencies": {
     "handlebars": "^4.7.8"
   },
