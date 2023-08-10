@@ -100,6 +100,9 @@
     "paths": {
       "handlebars": [
         "./node_modules/handlebars/types/index.d.ts"
+      ],
+      "glob": [
+        "./node_modules/glob/dist/cjs/src/index.d.ts"
       ]
     }
   },
