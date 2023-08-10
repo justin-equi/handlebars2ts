@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "rome": "^12.1.3",
     "typescript": "^5.1.6",
     "vitest": "^0.34.1"
   },
@@ -21,7 +22,8 @@
     "esm": "mkdir -p lib/esm && tsc --module es2020 --declarationDir lib/types --outDir ./lib/esm; echo '{\"type\": \"module\"}' > ./lib/esm/package.json",
     "build": "rm -rf lib && yarn cjs && yarn esm",
     "test": "vitest run ",
-    "test:watch": "vitest run --watch"
+    "test:watch": "vitest run --watch",
+    "format": "rome format --write src"
   },
   "dependencies": {
     "handlebars": "^4.7.8"

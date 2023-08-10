@@ -1,1 +1,2 @@
-export * from './textToIntf'
+export * from "./textToIntf";
+export * from "./makeTemplate";

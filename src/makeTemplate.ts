@@ -1,10 +1,12 @@
 import { textToIntf } from "./textToIntf";
 
-
 export function makeTemplate(name: string, template: string) {
-  return `
+	return `
 import {compile} from 'handlebars';
 
-export const ${name} = compile< ${textToIntf(template)}>(${JSON.stringify(template)});
+export const ${name} = compile<${textToIntf(template)}>(${JSON.stringify(
+		template,
+	)});
+export default ${name};
   `;
 }
