@@ -48,23 +48,25 @@ const handleStatement = (statement: HasType, tree:Tree = {name:'root'}) => {
 };
 
 
-
-
-function generate(type: Tree, depth = 1) {
-  const pad = ''.padEnd(depth, '\t');
-
-  let ret = `{\n`;
+function keyValues(type: Tree, depth = 0) {
+    const padOut = ''.padEnd(depth+1, '\t');
+  let ret = ''
   for (const [name, tree] of Object.entries(type.tree ?? {})) {
     if (tree.tree) {
-      ret += `${pad}${name}: ${generate(tree, depth + 1)}${tree.array ? '[]\n' : '\n'}`
+      ret += `${padOut}${name}: {\n${keyValues(tree, depth+1)}${padOut}}${tree.array ? '[]\n' : '\n'}`
     } else {
-      ret += `${pad}${name}: string;\n`;
+      ret += `${padOut}${name}: string;\n`;
     }
   }
-  ret += `}`;
   return ret;
+}
+
+function generate(type: Tree, depth = 0) {
+  const pad = ''.padEnd(depth, '\t');
+  return`${pad}{\n${keyValues(type, depth)}${pad}}`;  
 }
 
 export function textToIntf(str: string) {
   return generate(parseHandlebarsVariables(str));
 }
+

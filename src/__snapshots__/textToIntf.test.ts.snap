@@ -10,7 +10,7 @@ exports[`textToIntf > should parse simple type loop 1`] = `
 "{
 	person: {
 		name: string;
-}[]
+	}[]
 }"
 `;
 
@@ -18,5 +18,11 @@ exports[`textToIntf > should parse simple type multiple 1`] = `
 "{
 	name: string;
 	more: string;
+}"
+`;
+
+exports[`textToIntf > should parse simple type multiple same 1`] = `
+"{
+	name: string;
 }"
 `;

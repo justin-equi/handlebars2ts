@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should compile 1`] = `
+{
+  "diagnostics": [],
+  "outputText": "\\"use strict\\";
+Object.defineProperty(exports, \\"__esModule\\", { value: true });
+exports.helloWorld = void 0;
+var handlebars_1 = require(\\"handlebars\\");
+exports.helloWorld = (0, handlebars_1.compile)(\\"hello, {{{name}}}!\\");
+",
+  "sourceMapText": undefined,
+}
+`;
+
+exports[`should make a nice template 1`] = `
+"
+import {compile} from 'handlebars';
+
+export const helloWorld = compile< {
+	name: string;
+}>(\\"hello, {{{name}}}!\\");
+  "
+`;
