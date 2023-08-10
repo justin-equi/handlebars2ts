@@ -7,6 +7,10 @@
     "lib",
     "src"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justin-equi/handlebars2ts.git"
+  },
   "dependencies": {
     "handlebars": "^4.7.8"
   },
