@@ -10,7 +10,7 @@ There are 2 main entry points
 - `makeTemplate('template content')` this will output a string suitable to be saved in a typescript file.
 - `textToIntf('template content')` this will return a string that is suitable to be used as anonymous type to the content object.
 
-# Not Done
+# CLI
 
-There is no deamon or tool that will scan a directory or whatever and generate typescript files. I don't really need
-that. Patches welcome.
+A cli tool handlebars2ts is included. It's probably not what you want as it is super basic,
+but it shows how the tool could be used.
